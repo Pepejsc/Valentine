@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Porotito Hermoso ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="http://googleusercontent.com/image_collection/image_retrieval/15174272459412352777_0?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="heartCanvas"></canvas>
+
+    <div id="player"></div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <section class="scene active" id="step-1">
+        <div class="glass-card">
+            <h1>Nuestra Historia... ❤️</h1>
+            <p>Hay historias que se escriben en papel, pero la nuestra empezó en un chat que cambió mi mundo.</p>
+            <button class="btn-premium" onclick="startStory()">Empezar nuestro cuento ➔</button>
+        </div>
+    </section>
+
+    <section class="scene" id="step-2">
+        <div class="glass-card">
+            <h2>Donde todo comenzó</h2>
+            <img src="/imgs/primerChat.png" class="img-premium" alt="Nuestro primer chat">
+            <p>Me arriesgué a escribirte sin saber que ese mensaje se convertiría en mi mejor decisión.</p>
+            <button class="btn-premium" onclick="nextStep(3)">Y llegó el día de vernos... ➔</button>
+        </div>
+    </section>
+
+    <section class="scene" id="step-3">
+        <div class="glass-card">
+            <h2>Nuestra primera mirada ✨</h2>
+            <img src="/imgs/primeraVista.png" class="img-premium" alt="Primera vez que nos vimos">
+            <p>Ese momento en que te vi por primera vez... los nervios, la emoción y la certeza de que serías alguien muy especial.</p>
+            <button class="btn-premium" onclick="nextStep(4)">Cuando el corazón habló... ➔</button>
+        </div>
+    </section>
+
+    <section class="scene" id="step-4">
+        <div class="glass-card">
+            <h2>El primer "Te Quiero" ❤️</h2>
+            <img src="/imgs/primerTeQuiero.png" class="img-premium">
+            <img src="/imgs/primerTeQuiero2.png" class="img-premium">
+            <p>No fue solo una frase, fue cuando acepté que mi corazón ya te pertenecía por completo.</p>
+            <button class="btn-premium" onclick="nextStep(5)">Nuestra primera vez juntos... ➔</button>
+        </div>
+    </section>
+
+    <section class="scene" id="step-5">
+        <div class="glass-card">
+            <h2>Inseparables desde entonces 🫂</h2>
+            <img src="/imgs/primeraVez.png" class="img-premium">
+            <p>Esa primera vez que compartimos nuestro espacio e intimidad, confirmando que encajamos perfectamente.</p>
+            <button class="btn-premium" onclick="nextStep(6)">Tus palabras que me enamoran ➔</button>
+        </div>
+    </section>
+
+    <section class="scene" id="step-6">
+        <div class="glass-card">
+            <h2>Lo que nos decimos... 💬</h2>
+            <div class="chat-container">
+                <img src="/imgs/losMejoresMensajes.png" class="img-chat-bubble">
+                <img src="/imgs/losMejoresMensajes2.png" class="img-chat-bubble">
+            </div>
+            <p>Guardo cada palabra y cada detalle, porque tus mensajes son mi refugio favorito.</p>
+            <button class="btn-premium" onclick="nextStep(7)">Mira todo lo vividos ➔</button>
+        </div>
+    </section>
+
+    <section class="scene" id="step-7">
+        <div class="glass-card">
+            <h2>Nuestro Álbum 📸</h2>
+            <div class="photo-grid">
+                <img src="/imgs/tg1.jpeg" class="grid-img"><img src="/imgs/tg2.jpeg" class="grid-img"><img src="/imgs/tg3.jpeg" class="grid-img">
+                <img src="/imgs/tg4.jpeg" class="grid-img"><img src="/imgs/tg5.jpeg" class="grid-img"><img src="/imgs/tg6.jpeg" class="grid-img">
+            </div>
+            <button class="btn-premium" onclick="nextStep(8)">Tengo una última cosa... ➔</button>
+        </div>
+    </section>
+
+    <section id="step-8" class="scene">
+        <div class="glass-card">
+            <h1 class="heartbeat">¿Quieres ser mi Valentine?</h1>
+            <img src="/imgs/tg7.jpeg" class="img-premium shadow">
+            <p>¿Aceptas, Porotito?</p>
+            <div class="btn-group">
+                <button id="yesBtn" class="btn-premium">¡SÍ! 😍</button>
+                <button id="noBtn" class="btn-ghost">No 🥺</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="customModal" class="modal-overlay">
+        <div class="glass-card modal-content">
+            <h1>¡SÍ! ❤️</h1>
+            <p>TE QUIERO MUCHO MI POROTITO</p>
+            <button class="btn-premium" onclick="closeModal()">¡Acepto! 😍</button>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
